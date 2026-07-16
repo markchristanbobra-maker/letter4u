@@ -1,0 +1,284 @@
+/* Import a clean, friendly font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffe5ec;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(251, 111, 146, 0.2);
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    position: relative;
+    border: 2px solid #ffb3c6;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Floating/Pulsing Heart Icons */
+.heart-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+    display: inline-block;
+    animation: heartbeat 1.5s infinite ease-in-out;
+}
+
+/* Giant Heart */
+.giant-heart {
+    font-size: 90px;
+    margin-bottom: 25px;
+    display: inline-block;
+    animation: heartbeat 1.2s infinite ease-in-out;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+h2 {
+    color: #ff4d6d;
+    margin-bottom: 15px;
+}
+
+.intro-title {
+    color: #ff4d6d;
+    font-size: 22px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+p.letter-text {
+    color: #595959;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.sub-text {
+    color: #808080;
+    margin-bottom: 30px;
+}
+
+/* Hide inactive sections smoothly */
+.section {
+    display: none;
+    width: 100%;
+}
+
+.section.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Buttons */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    height: 50px;
+    width: 100%;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s, border 0.2s;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Primary Button (Yes / Next) */
+.btn.primary {
+    background-color: #ff4d6d;
+    color: white;
+    border: 2px solid #ff4d6d;
+}
+
+.btn.primary:hover {
+    background-color: #ff758f;
+    border-color: #ff758f;
+    transform: scale(1.05);
+}
+
+/* Secondary Button (No) */
+.btn.secondary {
+    background-color: transparent;
+    color: #ff4d6d;
+    border: 2px solid #ff4d6d;
+    position: absolute;
+    right: 60px;
+}
+
+.btn.secondary:hover {
+    background-color: rgba(255, 77, 109, 0.05);
+}
+
+/* ("ALERT") DESIGN --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 229, 236, 0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.modal-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(255, 77, 109, 0.3);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    border: 3px solid #ff4d6d;
+    transform: scale(0.7);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-overlay.open .modal-content {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+    color: #ff4d6d;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.modal-close:hover {
+    transform: scale(1.2);
+}
+
+.modal-heart {
+    font-size: 60px;
+    margin-bottom: 15px;
+    animation: heartbeat 1.2s infinite;
+}
+
+.modal-message {
+    color: #595959;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.date-details {
+    background-color: #ffe5ec;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    text-align: left;
+    border-left: 5px solid #ff4d6d;
+}
+
+.date-details p {
+    color: #ff4d6d;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.date-details p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- CREATOR CREDITS FOOTER --- */
+.credits {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #ff758f;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 179, 198, 0.4);
+    backdrop-filter: blur(5px);
+    z-index: 500; /* Stays visible above the background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px; /* Space between the text and the icons */
+}
+
+.creator-name {
+    color: #ff4d6d;
+    font-weight: 600;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 15px; 
+}
+
+.social-links a {
+    color: #ff758f;
+    font-size: 18px;
+    transition: color 0.2s, transform 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links a:hover {
+    color: #ff4d6d;
+    transform: scale(1.15);
+}
+
+.social-links a[title="Built with Gemini AI"]:hover {
+    color: #7a5cff;
+    transform: scale(1.2) rotate(5deg);
+}
