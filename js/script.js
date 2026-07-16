@@ -32,7 +32,7 @@ window.onYouTubeIframeAPIReady = function() {
         width: '0',
         videoId: '-FvlSkumjSA', // Yes video ID[cite: 1]
         playerVars: {
-            'playsinline': 1,
+            'playsinline': 4,
             'autoplay': 0,
             'controls': 0
         }
