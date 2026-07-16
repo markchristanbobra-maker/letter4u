@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Letter For You</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="card">
+
+        <!-- Section 1: The Intro -->
+        <div id="section-intro" class="section active">
+            <div class="giant-heart">💝</div>
+            <h2 class="intro-title">I have something to tell you...</h2>
+            <button id="btn-to-confession" class="btn primary">Next</button>
+        </div>
+
+        <!-- Section 2: The Confession -->
+        <div id="section-confession" class="section">
+            <div class="heart-icon">❤️</div>
+            <h2>Dear My Special Someone,</h2>
+            <p class="letter-text">
+                I've been holding onto these feelings for a while now, and I finally found the courage to write them
+                down. From the small moments we share to the way you make me laugh, you've quietly become my favorite
+                part of every single day. You make my world infinitely brighter just by being yourself.
+            </p>
+            <p class="letter-text">
+                I wanted to be completely honest with you...
+            </p>
+            <button id="btn-to-question" class="btn primary">Next</button>
+        </div>
+
+        <!-- Section 3: The Big Question -->
+        <div id="section-question" class="section">
+            <div class="heart-icon">❤️</div>
+            <h2>Do you like me back?</h2>
+            <p class="sub-text">Please be honest... 😉</p>
+            <div class="btn-group">
+                <button id="btn-yes" class="btn primary" style="margin-right: 90px;">Yes!</button>
+                <button id="btn-no" class="btn secondary">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- alert -->
+    <div id="custom-alert" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" id="modal-close-btn">&times;</span>
+            <div class="modal-heart">💖</div>
+            <h2>I knew it! Let's go out! 🥰</h2>
+            <p class="modal-message">I can't wait to spend time with you. Here are the details of our perfect date:</p>
+            <div class="date-details">
+                <p>📍 <strong>Place:</strong> That cozy cafe you love</p>
+                <p>📅 <strong>Date:</strong> This Saturday at 6:00 PM</p>
+            </div>
+            <button class="btn primary" id="modal-ok-btn">Yay! See you there!</button>
+        </div>
+    </div>
+
+    <!-- Hidden YouTube Player for sound effects -->
+    <div id="yt-player-yes" style="display: none;"></div>
+    <div id="yt-player-no" style="display: none;"></div>
+
+    <!-- Creator Credits Footer with Social Links -->
+    <div class="credits">
+        <span>Made by <span class="creator-name">@Mark Chris</span></span>
+        <div class="social-links">
+            <a href="https://www.instagram.com/itsmetannn38" target="_blank" rel="noopener noreferrer" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61578074695474" target="_blank" rel="noopener noreferrer" title="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" title="Built with Gemini AI">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </a>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
